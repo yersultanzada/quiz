@@ -19,10 +19,9 @@
 		$(".contact-form i.fa-phone").css({
 			'display': 'none'
 		});
-		$("._preloader").css({
+		$(".contact-form__button img").css({
 			'display': 'inline-block'
 		});
-
 		$.ajax({
 			url: "mail/php/mail.php",
 			type: "POST",
@@ -50,7 +49,6 @@
 				} else {
 					formDescription.text('');
 				}
-
 				if (respond.success) {
 					/*window.location.replace("/thank-you.php?status=success");*/
 					$('.prev_slide').css({
