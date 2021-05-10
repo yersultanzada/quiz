@@ -52,7 +52,15 @@
 				}
 
 				if (respond.success) {
-					window.location.replace("/thank-you.php?status=success");
+					/*window.location.replace("/thank-you.php?status=success");*/
+					$('.prev_slide').css({
+						'display': 'none'
+					});
+					$('.last_slide').css({
+						'display': 'block'
+					});
+					$('.header-line').slideUp(300);
+					$('.progress-line').slideUp(300);
 				}
 			},
 		});
