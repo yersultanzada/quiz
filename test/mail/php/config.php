@@ -14,7 +14,7 @@
 
 	// *** SMTP *** //
 
-		require_once($_SERVER['DOCUMENT_ROOT'] . 'test/mail/phpmailer/smtp.php');
+		require_once($_SERVER['DOCUMENT_ROOT'] . '/test/mail/phpmailer/smtp.php');
 		const HOST = 'ssl://smtp.yandex.ru';
 		const LOGIN = 'webtech19studio@yandex.kz';
 		const PASS = 'web_tech2019';
