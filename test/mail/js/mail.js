@@ -13,15 +13,10 @@
 		// Сохраняем в переменную див, в который будем выводить сообщение формы
 		let formDescription = $(this).find('.contact-form__description');
 
-		/*let testSlider = $('.test-slider');*/
-
 		let fd = new FormData(form);
-		$(".contact-form i.fa-phone").css({
-			'display': 'none'
-		});
-		$(".contact-form__button img").css({
+/*		$(".contact-form__button img").css({
 			'display': 'inline-block'
-		});
+		});*/
 		$.ajax({
 			url: "mail/php/mail.php",
 			type: "POST",

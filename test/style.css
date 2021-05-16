@@ -158,6 +158,7 @@ label.error { display: none !important; }
 .last-step-form { width: 100%; padding-left: 15px; }
 .last-step-form__label { display: block; font-size: 18px; margin-bottom: 5px; }
 .last-step-form__input { display: block; width: 100%; max-width: 460px; padding: 11px 0 11px 50px; margin-bottom: 10px; border: 1px solid transparent; font-family: "PT Sans"; font-size: 22px; border-radius: 3px; background: #EFEFEF url("img/phone.png") no-repeat left 20px center; }
+.last-step-form__input.contact-form__input_name { background: #EFEFEF url("img/user.png") no-repeat left 20px center; }
 .last-step-form__button { display: block; width: 100%; max-width: 460px; padding: 25px 0; border-radius: 4px; border: 0; border-bottom: 3px solid #febf00; background: #ffde00; font-size: 18px; font-weight: bold; color: #000; text-align: center; text-transform: uppercase; -webkit-transition: .3s; transition: .3s; position: relative; overflow: hidden; margin-bottom: 10px; cursor: pointer; }
 .last-step-form__button span { font-weight: inherit; position: relative; z-index: 2; }
 .last-step-form__button span:after { content: ""; display: inline-block; width: 23px; height: 23px; background: url("img/form.svg") no-repeat center; margin: 0 0 -5px 10px; }
