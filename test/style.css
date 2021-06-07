@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Oswald';
-    src: url('./fonts/Oswald-DemiBold.woff2') format('woff2'),
-        url('fonts/Oswald-DemiBold.woff') format('woff');
+    src: url('./fonts/Oswald-DemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
 }

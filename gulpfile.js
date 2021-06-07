@@ -17,38 +17,6 @@ var banner = ['/*!\n',
   '\n'
 ].join('');
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
-
-  // Bootstrap
-  gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
-
-  // Font Awesome
-  gulp.src([
-      './node_modules/@fortawesome/**/*',
-    ])
-    .pipe(gulp.dest('./vendor'))
-
-  // jQuery
-  gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'))
-
-  // jQuery Easing
-  gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-easing'))
-
-});
-
 // Compile SCSS
 gulp.task('css:compile', function() {
   return gulp.src('./scss/**/*.scss')
@@ -65,7 +33,7 @@ gulp.task('css:compile', function() {
     .pipe(gulp.dest('./css'))
 });
 
-// Minify CSS
+// Minify css
 gulp.task('css:minify', ['css:compile'], function() {
   return gulp.src([
       './css/*.css',
@@ -79,31 +47,11 @@ gulp.task('css:minify', ['css:compile'], function() {
     .pipe(browserSync.stream());
 });
 
-// CSS
+// css
 gulp.task('css', ['css:compile', 'css:minify']);
 
-// Minify JavaScript
-gulp.task('js:minify', function() {
-  return gulp.src([
-      './js/*.js',
-      '!./js/*.min.js'
-    ])
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browserSync.stream());
-});
-
-// JS
-gulp.task('js', ['js:minify']);
-
 // Default task
-gulp.task('default', ['css', 'js', 'vendor']);
+gulp.task('default', ['css']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -115,8 +63,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
-  gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
 });
