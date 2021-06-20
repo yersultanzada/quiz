@@ -581,7 +581,8 @@ label.error {
   font-weight: bold;
   padding-left: 30px;
   margin: -25px 0 40px 15px;
-  background: url("../img/gift.png") no-repeat left center;
+  background: url("../img/gift-box.svg") no-repeat left center;
+  background-size: 24px;
 }
 
 .step-slide__title {
@@ -649,6 +650,14 @@ label.error {
   -ms-flex-direction: row;
   flex-direction: row;
   padding-left: 35px;
+}
+
+.step-slide__grid input.pick-item__digit {
+  width: 70px;
+  height: 35px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
 }
 
 .pick-item {
@@ -719,7 +728,7 @@ label.error {
 .last-step-form__label {
   display: block;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .last-step-form__input {
@@ -827,8 +836,9 @@ label.error {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
-  background: url("../img/done.png") no-repeat top center;
+  background: url("../img/done.svg") no-repeat top center;
   text-align: center;
+  background-size: 61px;
 }
 
 .after-submit__descr {
@@ -918,9 +928,6 @@ label.error {
     padding: 30px 0 0;
     background-position: top center;
     margin-left: 0;
-  }
-  .pick-item {
-    text-align: center;
   }
   .pick-item__label {
     display: inline-block;
