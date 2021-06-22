@@ -14,9 +14,6 @@
 		let formDescription = $(this).find('.contact-form__description');
 
 		let fd = new FormData(form);
-/*		$(".contact-form__button img").css({
-			'display': 'inline-block'
-		});*/
 		$.ajax({
 			url: "mail/php/mail.php",
 			type: "POST",
