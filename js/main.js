@@ -35,19 +35,18 @@ $(document).ready(function(){
 		]
 	});
 
-
-	var timerId = 0;
 	$(".main-btn").fancybox({
 		buttons : [
 		'close'
 		],
-		iframe : {
+		idleTime: 10
+		/*iframe : {
 			css : {
 				width : '100%',
 				maxWidth: '1170px'
 			}
-		},
-		afterLoad: function () {
+		},*/
+		/*afterLoad: function () {
 			$('iframe').on('load', function(event) {
 				event.preventDefault();
 				frameHeight();
@@ -64,20 +63,20 @@ $(document).ready(function(){
 		afterClose: function () {
 			clearTimeout(timerId);
 			// console.log('clear');
-		}
+		}*/
 	});
 
-	function frameHeight () {
+	/*function frameHeight () {
 		var height = $('iframe').contents().find('html').height();
 		$('iframe').height(height);
-	}
+	}*/
 
-	function frameHeightRec () {
+	/*function frameHeightRec () {
 		var height = $('iframe').contents().find('html').height();
 		$('iframe').height(height);
 		timerId = setTimeout(function() {
 			frameHeightRec();
 		}, 100);
 		// console.log('call');
-	}
+	}*/
 });
