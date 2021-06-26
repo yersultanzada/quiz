@@ -7,8 +7,12 @@
   font-weight: 600;
   font-style: normal;
 }
-
-
+.fancybox-content {
+  overflow: hidden !important;
+}
+.fancybox-iframe {
+  overflow: hidden !important;
+}
 .flex {
   display: -webkit-flex;
   display: -moz-flex;

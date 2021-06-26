@@ -25,6 +25,14 @@
   font-style: normal;
 }
 
+.fancybox-content {
+  overflow: hidden !important;
+}
+
+.fancybox-iframe {
+  overflow: hidden !important;
+}
+
 .flex {
   display: -moz-flex;
   display: -ms-flex;
